@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Flow - Welcome</title>
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body class="gradient-bg">
+
+  <!-- Logo -->
+<img src="logo.png" alt="Task Flow Logo" class="logo" />
+
+<!-- Main Title and Slogan -->
+<div class="title-group">
+  <div class="main-title">Task Flow</div>
+  <p class="slogan">Turn plans into progress — one task at a time.</p>
+</div>
+<p class="age-warning">Age verification required for access.</p>
+
+  <!-- Main Form Box -->
+  <div class="container landing">
+    <h1 class="welcome-title">Verify Your Identity</h1>
+    <form id="userForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required />
+
+      <button type="submit">Verify & Continue</button>
+      <p id="error" class="error-message"></p>
+    </form>
+  </div>
+
+  <!-- Terms Message -->
+  <p class="terms-note">By continuing, you confirm that you are over 10 years old and agree to our terms of service.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>

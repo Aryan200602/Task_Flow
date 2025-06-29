@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Flow</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="left-header">
+      <div class="logo-title">
+        <img src="logo.png" alt="Task Flow Logo" class="logo-img" />
+        <h1 class="app-title">Task Flow</h1>
+      </div>
+      
+      <p class="slogan"><em>Your daily work, managed efficiently with progress, purpose, and peace of mind.</em></p>
+    </div>
+    <div class="right-header">
+      <div class="dark-mode-container">
+        <span class="mode-label" id="modeLabel">🌞 Light</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      
+      <img id="avatar" class="avatar" src="" alt="Avatar" />
+      <button class="logout-btn" id="logoutBtn">Sign Out</button>
+    </div>
+  </div>
+
+  <div class="app-container full-screen">
+    <div class="task-input">
+      <div class="task-input-row">
+        <input type="text" id="taskInput" placeholder="Add new task..." />
+        <button id="addTaskBtn">Add</button>
+      </div>
+      <div class="global-tracker">
+        <span id="globalProgressBar">0%</span>
+      </div>
+    </div>
+
+    <!-- Section Toggle Buttons -->
+    <div class="section-toggle">
+      <button data-section="todo" class="toggle-btn active">Todo</button>
+      <button data-section="completed" class="toggle-btn">Completed</button>
+      <button data-section="archived" class="toggle-btn">Archived</button>
+    </div>
+
+    <!-- Task Columns -->
+    <div class="task-columns">
+      <div class="column section" data-section="todo">
+        <h2>Todo</h2>
+        <ul id="todoList"></ul>
+      </div>
+      <div class="column section" data-section="completed" style="display: none;">
+        <h2>Completed</h2>
+        <ul id="completedList"></ul>
+      </div>
+      <div class="column section" data-section="archived" style="display: none;">
+        <h2>Archived</h2>
+        <ul id="archivedList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
